@@ -35,7 +35,7 @@ public class Visite {
 	
 	@Temporal(TemporalType.DATE)
 	@DateTimeFormat(pattern="yyyy-MM-dd")
-	private Date date_visite;
+	private Date dateVisite;
 	
 	@ManyToOne
 	@JoinColumn(name = "numero_medecin")
@@ -70,12 +70,14 @@ public class Visite {
 		this.patient = patient;
 	}
 
-	public Date getDate_visite() {
-		return date_visite;
+	
+
+	public Date getDateVisite() {
+		return dateVisite;
 	}
 
-	public void setDate_visite(Date date_visite) {
-		this.date_visite = date_visite;
+	public void setDateVisite(Date dateVisite) {
+		this.dateVisite = dateVisite;
 	}
 
 	public Medecin getMedecin() {

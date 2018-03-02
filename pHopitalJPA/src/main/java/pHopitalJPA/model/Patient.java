@@ -7,17 +7,26 @@ import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
+import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-
+@Entity
+@Table(name = "patient")
+@NamedQueries({ 
+		@NamedQuery(name = "Patient.findAllWithVisites", query = "select distinct a from Patient a left join fetch a.visitesPatient "),
+		@NamedQuery(name = "Patient.findPersoByKeyWithVisites", query = "select distinct a from Patient a left join fetch a.visitesPatient where a.numero=:numero")
+		 })
 
 public class Patient {
 	@Id
