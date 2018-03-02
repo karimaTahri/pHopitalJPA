@@ -1,13 +1,17 @@
 package pHopitalJPA.model;
 
 
+import java.util.List;
+
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Version;
 import javax.validation.constraints.NotNull;
@@ -33,6 +37,12 @@ public class Patient {
 	@Column(name = "tel_patient", length = 150)
 	@Size(min = 10, message = "il faut 10 caracteres minimum")
 	private Integer tel;
+	
+	@OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
+	private List<Visite> visitesPatient;
+	
+	
+	
 	
 	
 	@Embedded

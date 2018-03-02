@@ -53,4 +53,68 @@ public class Visite {
 	@Version
 	private int version;
 
+	public Visite() {
+		
+	}
+
+	public Integer getNumero() {
+		return numero;
+	}
+
+	public void setNumero(Integer numero) {
+		this.numero = numero;
+	}
+
+	public Patient getPatient() {
+		return patient;
+	}
+
+	public void setPatient(Patient patient) {
+		this.patient = patient;
+	}
+
+	public Date getDate_visite() {
+		return date_visite;
+	}
+
+	public void setDate_visite(Date date_visite) {
+		this.date_visite = date_visite;
+	}
+
+	public Medecin getMedecin() {
+		return medecin;
+	}
+
+	public void setMedecin(Medecin medecin) {
+		this.medecin = medecin;
+	}
+
+	public Salle getSalle() {
+		return salle;
+	}
+
+	public void setSalle(Salle salle) {
+		this.salle = salle;
+	}
+
+	public Integer getTarif() {
+		return tarif;
+	}
+
+	public void setTarif(Integer tarif) {
+		this.tarif = tarif;
+	}
+
+	public int getVersion() {
+		return version;
+	}
+
+	public void setVersion(int version) {
+		this.version = version;
+	}
+	
+	
+	
+	
+
 }
