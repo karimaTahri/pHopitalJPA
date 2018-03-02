@@ -6,7 +6,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 <title>Liste des Visites</title>
 </head>
 <body>
@@ -17,7 +18,7 @@
 	<td>N°</td>  
 	<td>Patient</td> 
 	<td>Date de la visite</td>  
-	<td>Medecin</td>  
+<!-- 	<td>Medecin</td>  --> 
 	<td>Salle</td>
 	<td>Tarif</td>
 </tr>
@@ -26,11 +27,11 @@
 	<td><c:out value="${ visite.numero }" /></td>  
 	<td><c:out value="${ visite.patient.prenom }" /> <c:out value="${ visite.patient.nom }" /></td>  
 	<td><fmt:formatDate value="${ adherent.dateVisite }" pattern="dd/MM/yyyy"/></td>  
-	<td><c:out value="${ visite.medecin.prenom }" /> <c:out value="${ visite.medecin.nom }" /></td> 
+	<%-- <td><c:out value="${ visite.medecin.prenom }" /> <c:out value="${ visite.medecin.nom }" /></td>  --%>
 	<td><c:out value="${ visite.salle}" /></td>
 	<td><c:out value="${ visite.tarif }" /></td>
-	<td><a href="edit?id=${ adherent.numero }" class="btn btn-success">edition</a></td>
-	<td><a href="delete?id=${ adherent.numero }" class="btn btn-danger">suppresion</a></td>
+	<td><a href="edit?id=${ visite.numero }" class="btn btn-success">edition</a></td>
+	<td><a href="delete?id=${ visite.numero }" class="btn btn-danger">suppresion</a></td>
 </tr>
    
 </c:forEach>
