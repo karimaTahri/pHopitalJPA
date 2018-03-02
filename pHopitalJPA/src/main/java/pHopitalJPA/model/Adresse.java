@@ -52,7 +52,6 @@ public class Adresse {
 	}
 
 	public void setCodePostal(String codePostal) {
-		
 		this.codePostal = codePostal;
 	}
 
