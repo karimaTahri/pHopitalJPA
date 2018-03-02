@@ -1,9 +1,10 @@
 package pHopitalJPA.model;
 
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 
 
-
+@Embeddable
 public class Adresse {
 	@Column(name = "numero")
 	private Integer numero;
