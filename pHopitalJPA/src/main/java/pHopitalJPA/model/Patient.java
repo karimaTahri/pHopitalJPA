@@ -1,10 +1,5 @@
 package pHopitalJPA.model;
 
-public class Patient {
-
-}
-package pHopitalJPA.model;
-
 
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
