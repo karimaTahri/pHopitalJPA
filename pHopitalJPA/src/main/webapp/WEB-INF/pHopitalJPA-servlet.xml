@@ -14,7 +14,7 @@
 	<mvc:annotation-driven validator="validator" />
 
 	<!-- ou sont les beans spring -->
-	<context:component-scan base-package="controller" />
+	<context:component-scan base-package="pHopitalJPA" />
 
 	<!-- ou sont les vues -->
 	<bean
