@@ -18,7 +18,6 @@
 					<th>id</th>
 					<th>nom</th>
 					<th>prenom</th>
-					<th>nom</th>
 					<th>numero</th>
 					<th>rue</th>
 					<th>code postal</th>

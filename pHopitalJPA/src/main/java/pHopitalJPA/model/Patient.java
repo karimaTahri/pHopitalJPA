@@ -45,7 +45,7 @@ public class Patient {
 	
 	@Column(name = "tel_patient", length = 150)
 	@Size(min = 10, message = "il faut 10 caracteres minimum")
-	private Integer tel;
+	private  String tel;
 	
 	@OneToMany(mappedBy = "patient", fetch = FetchType.LAZY)
 	private List<Visite> visitesPatient;
@@ -114,11 +114,22 @@ public class Patient {
 		this.version = version;
 	}
 
-	public Integer getTelo() {
+	
+	public List<Visite> getVisitesPatient() {
+		return visitesPatient;
+	}
+
+	public void setVisitesPatient(List<Visite> visitesPatient) {
+		this.visitesPatient = visitesPatient;
+	}
+
+	
+	
+	public String getTel() {
 		return tel;
 	}
 
-	public void setTel(Integer tel) {
+	public void setTel(String tel) {
 		this.tel = tel;
 	}
 

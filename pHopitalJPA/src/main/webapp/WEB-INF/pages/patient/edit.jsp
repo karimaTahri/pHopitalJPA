@@ -16,11 +16,13 @@
 			<form:form action="save" method="post" modelAttribute="patient">
 				<form:hidden path="version" />
 				
+				
 				<div class="form-group">
 					<form:label path="numero">Numero:</form:label>
 					<form:input path="numero" readonly="true" />
 					<form:errors path="numero"></form:errors>
 				</div>
+				
 				
 				<div class="form-group">
 					<form:label path="nom">Nom:</form:label>
@@ -28,12 +30,14 @@
 					<form:errors path="nom"></form:errors>
 				</div>
 
+
 				<div class="form-group">
 					<form:label path="prenom">Prenom:</form:label>
 					<form:input path="prenom" />
 					<form:errors path="prenom"></form:errors>
 				</div>
 						
+			
 						
 								
 				<div class="form-group">
@@ -59,7 +63,6 @@
 					<form:input path="adresse.ville" />
 					<form:errors path="adresse.ville"></form:errors>
 				</div>
-				
 				
 				<div class="form-group">
 					<form:label path="tel">Tel:</form:label>
