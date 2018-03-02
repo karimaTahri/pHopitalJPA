@@ -41,10 +41,7 @@ public class Visite {
 	@JoinColumn(name = "numero_medecin")
 	private Medecin medecin;
 	
-
-	@ManyToOne
-	@JoinColumn(name = "numero_salle")
-	private Salle salle;
+	private String salle;
 	
 	@Column(name = "tarif",nullable = false)
 	@NotNull(message = "nom null")
@@ -89,11 +86,12 @@ public class Visite {
 		this.medecin = medecin;
 	}
 
-	public Salle getSalle() {
+	
+	public String getSalle() {
 		return salle;
 	}
 
-	public void setSalle(Salle salle) {
+	public void setSalle(String salle) {
 		this.salle = salle;
 	}
 
