@@ -37,6 +37,7 @@ public class Visite {
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date dateVisite;
 	
+	
 	@ManyToOne
 	@JoinColumn(name = "numero_medecin")
 	private Medecin medecin;
@@ -79,14 +80,14 @@ public class Visite {
 	public void setDateVisite(Date dateVisite) {
 		this.dateVisite = dateVisite;
 	}
-
+/*
 	public Medecin getMedecin() {
 		return medecin;
 	}
 
 	public void setMedecin(Medecin medecin) {
 		this.medecin = medecin;
-	}
+	}*/
 
 	
 	public String getSalle() {

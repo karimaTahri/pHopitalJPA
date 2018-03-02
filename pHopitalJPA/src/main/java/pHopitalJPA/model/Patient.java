@@ -55,10 +55,10 @@ public class Patient {
 	
 	
 	@Embedded
-	@AttributeOverrides({ @AttributeOverride(name = "numero", column = @Column(name = "numero_rue_adherent")),
-			@AttributeOverride(name = "rue", column = @Column(name = "rue_adherent", length = 150)),
-			@AttributeOverride(name = "codePostal", column = @Column(name = "code_postal_adherent", length = 5)),
-			@AttributeOverride(name = "ville", column = @Column(name = "ville_adherent", length = 150)) })
+	@AttributeOverrides({ @AttributeOverride(name = "numero", column = @Column(name = "numero_rue_patient")),
+			@AttributeOverride(name = "rue", column = @Column(name = "rue_patient", length = 150)),
+			@AttributeOverride(name = "codePostal", column = @Column(name = "code_postal_patient", length = 5)),
+			@AttributeOverride(name = "ville", column = @Column(name = "ville_patient", length = 150)) })
 	private Adresse adresse;
 	
 		
